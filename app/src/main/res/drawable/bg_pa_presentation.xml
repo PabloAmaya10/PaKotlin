@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ bg_pa_presentation.xml
+  ~ Android Kotlin App"
+  ~ Created by Pablo Amaya on 01/09/2022, 12:33:27
+  ~ Copyright (c) 2022 Develop-MX. All rights reserved
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <gradient
+        android:centerColor="#123456"
+        android:endColor="#0080FF"
+        android:startColor="#050505" />
+
+</shape>
