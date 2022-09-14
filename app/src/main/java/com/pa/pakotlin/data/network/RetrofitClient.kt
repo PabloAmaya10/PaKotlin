@@ -11,7 +11,7 @@ object RetrofitClient {
     private const val CONNECTION_TIMEOUT = 10L
     private const val READ_TIMEOUT = 20L
     private const val WRITE_TIMEOUT = 20L
-    fun api(): ApiService {
+    fun api(baseURL: String): ApiService {
         val retrofit: Retrofit.Builder by lazy {
             val interceptor = HttpLoggingInterceptor()
             interceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
@@ -25,7 +25,7 @@ object RetrofitClient {
             // .baseURL
             // .client(OkHttpClient.Builder())
             Retrofit.Builder()
-                .baseUrl("https://pokeapi.co/")
+                .baseUrl(baseURL)
                 .client(okHttpClient.build())
                 .addConverterFactory(GsonConverterFactory.create(GsonBuilder().create()))
         }

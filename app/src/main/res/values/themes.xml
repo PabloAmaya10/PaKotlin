@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.PaKotlin" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.PaKotlin" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -12,6 +12,11 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme_BackgroundPokemon">
+        <item name="android:background">@drawable/bg_pokemon</item>
+
     </style>
 
     <style name="Theme_InputTextPA" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -30,5 +35,24 @@
 
     <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
         <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="Theme_OptionTextPa" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="boxBackgroundMode">outline</item>
+        <item name="boxCornerRadiusBottomEnd">10dp</item>
+        <item name="boxCornerRadiusBottomStart">10dp</item>
+        <item name="boxCornerRadiusTopStart">10dp</item>
+        <item name="boxCornerRadiusTopEnd">10dp</item>
+        <item name="boxStrokeWidth">5dp</item>
+        <item name="hintTextColor">@color/bg_pa_input_box</item>
+        <item name="boxStrokeColor">@color/design_default_color_secondary</item>
+        <item name="startIconTint">@color/black</item>
+        <item name="android:paddingBottom">20dp</item>
+    </style>
+
+    <style name="Theme_BackgroundButtonPresentationPablo">
+        <item name="android:background">@drawable/bg_pa_button</item>
+        <item name="android:layout_margin">4dp</item>
     </style>
 </resources>

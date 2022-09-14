@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item
+            android:id="@+id/menu_home"
+            android:icon="@drawable/ic_pa_home"
+            android:title="@string/Home" />
+        <item
+            android:id="@+id/menu_profile"
+            android:icon="@drawable/ic_pa_profile"
+            android:title="Profile" />
+        <item
+            android:id="@+id/menu_content"
+            android:icon="@drawable/ic_pa_content"
+            android:title="Content" />
+        <item
+            android:id="@+id/menu_about"
+            android:icon="@drawable/ic_pa_about"
+            android:title="About" />
+        <item
+            android:id="@+id/menu_navigation"
+            android:icon="@drawable/ic_pa_about"
+            android:title="Navigation" />
+        <item
+            android:id="@+id/menu_pokemon"
+            android:icon="@drawable/ic_pa_about"
+            android:title="Pokemon" />
+    </group>
+
+</menu>

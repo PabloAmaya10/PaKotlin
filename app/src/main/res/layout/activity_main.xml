@@ -7,7 +7,7 @@
     android:background="@drawable/bg_pa_presentation"
     android:orientation="vertical"
     android:weightSum="4"
-    tools:context=".view.MainActivity">
+    tools:context=".presentation.view.MainActivity">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:layout_width="150dp"
@@ -63,5 +63,13 @@
         android:layout_height="65dp"
         android:layout_gravity="center"
         android:text="@string/pa_hint_login"
+        android:textSize="16sp" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRegister"
+        android:layout_width="300dp"
+        android:layout_height="65dp"
+        app:backgroundTint="@color/black"
+        android:layout_gravity="center"
+        android:text="@string/pa_hint_register"
         android:textSize="16sp" />
 </LinearLayout>

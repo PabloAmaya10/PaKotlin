@@ -1,12 +1,51 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">PaKotlin</string>
     <string name="pa_hint_user">Usuario:</string>
     <string name="pa_hint_password">Contraseña:</string>
+    <string name="pa_hint_password_confirm">Confirma tu contraseña:</string>
     <string name="pa_hint_login">Login</string>
+    <string name="pa_hint_register">Registrar</string>
+    <string name="pa_hint_name">Nombre(s)</string>
+    <string name="pa_hint_personal_data">Datos personales:</string>
+    <string name="pa_hint_user_data">Datos de usuario:</string>
+    <string name="pa_hint_last_name">Apellido paterno</string>
+    <string name="pa_hint_second_last_name">Apelido materno</string>
+    <string name="pa_hint_birthday">Fecha de nacimiento</string>
+    <string name="pa_hint_email">Email</string>
+    <string name="pa_hint_gender">Genero</string>
+    <string name="pa_hint_state">Estado</string>
+    <string name="pa_hint_phone">Telefono</string>
     <string name="pa_home_profile">Perfil</string>
     <string name="pa_home_content">Contenido</string>
     <string name="pa_home_about">Acerca de</string>
+    <string name="pa_register_error_name">El campo nombre no puede estar vacio</string>
+    <string name="pa_register_error_last_name">El campo apellido paterno no puede estar vacio</string>
+    <string name="pa_register_error_second_last_name">El campo apellido materno no puede estar vacio</string>
+    <string name="pa_register_error_birthday">El campo Fecha de nacimiento no puede estar vacio</string>
+    <string name="pa_register_error_email">El campo email no puede estar vacio</string>
+    <string name="pa_register_error_email_format">Correo invalido</string>
+    <string name="pa_register_error_gender">El campo genero no puede estar vacio</string>
+    <string name="pa_register_error_phone">El campo telefono no puede estar vacio</string>
+    <string name="pa_register_error_user">El campo usuario no puede estar vacio</string>
+    <string name="pa_register_error_password">El campo contraseña no puede estar vacio</string>
+    <string name="pa_register_error_state">El campo estado no puede estar vacio</string>
+    <string name="pa_register_error_password_confirm">No coinciden las contraseñas</string>
+    <string name="Home">Home</string>
+    <string name="Notification">Notification</string>
+    <string name="Perfil">Perfil</string>
+    <string name="drawer_open">drawer open</string>
+    <string name="drawer_close">drawer close</string>
     <string name="pa_home_welcome">Bienvenido:</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="data_user">
+            &lt;b&gt;Name:&lt;/b&gt; <xliff:g name="name">%s</xliff:g> <xliff:g name="lastname">%s</xliff:g>&lt;br&gt;<xliff:g name="secondLastName">%s</xliff:g>&lt;br&gt;
+            &lt;b&gt;Fecha de nacimiento:&lt;/b&gt; <xliff:g name="birthday">%s</xliff:g>&lt;br&gt;
+            &lt;b&gt;Correo:&lt;/b&gt; <xliff:g name="email">%s</xliff:g>&lt;br&gt;
+            &lt;b&gt;Genero:&lt;/b&gt; <xliff:g name="gender">%s</xliff:g>&lt;br&gt;
+            &lt;b&gt;Estado:&lt;/b&gt; <xliff:g name="state">%s</xliff:g>&lt;br&gt;
+            &lt;b&gt;Telefono:&lt;/b&gt; <xliff:g name="phone">%s</xliff:g>&lt;br&gt;
+            &lt;b&gt;Usuario:&lt;/b&gt; <xliff:g name="user">%s</xliff:g>
+    </string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

@@ -17,10 +17,13 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".view.ActDashboard"
+            android:name=".presentation.view.ActRegister"
             android:exported="false" />
         <activity
-            android:name=".view.MainActivity"
+            android:name=".presentation.view.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.view.ActDashboard"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,5 +32,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>

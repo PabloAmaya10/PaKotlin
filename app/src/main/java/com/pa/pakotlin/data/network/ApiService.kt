@@ -1,11 +1,23 @@
 package com.pa.pakotlin.data.network
 
-import okhttp3.ResponseBody
-import retrofit2.Response
-import retrofit2.http.GET
-import retrofit2.http.Query
+import com.pa.pakotlin.data.model.*
+import com.pa.pakotlin.data.network.Path.GET_INFO
+import com.pa.pakotlin.data.network.Path.GET_POKEMON
+import com.pa.pakotlin.data.network.Path.POST_LOGIN
+import com.pa.pakotlin.data.network.Path.POST_REGISTER
+import retrofit2.http.*
+import retrofit2.http.Path
 
 interface ApiService {
-    @GET("/api/v2/pokemon/charizard?")
-    fun getPokemon(@Query("limit") limit: Int): Response<ResponseBody>
+    @POST(POST_LOGIN)
+    suspend fun postLogin(@Body loginRequest: LoginRequest): LoginResponse
+
+    @POST(POST_REGISTER)
+    suspend fun postRegister(@Body registerRequest: RegisterRequest): LoginResponse
+
+    @GET(GET_INFO)
+    suspend fun getInfo(@Path("user") user: String): InfoResponse
+
+    @GET(GET_POKEMON)
+    suspend fun getPokemon(@Query("limit") limit: Int): ResponsePokemon
 }

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_pa_presentation"
+    android:padding="8dp">
+
+    <ScrollView
+        android:id="@+id/svPablo"
+        android:layout_width="match_parent"
+        android:layout_height="650dp"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".pablo.presentation.view.FrgPabloData">
+
+            <TextView
+                android:id="@+id/tvPersonalData"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="4dp"
+                android:text="@string/pa_hint_personal_data"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputName"
+                style="@style/Theme_InputTextPA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvPersonalData"
+                android:hint="@string/pa_hint_name"
+                app:errorEnabled="true"
+                app:startIconDrawable="@drawable/ic_pa_person"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etName"
+                    style="@style/Theme_InputTextPA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputLastName"
+                style="@style/Theme_InputTextPA"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/inputName"
+                android:hint="@string/pa_hint_last_name"
+                app:errorEnabled="true"
+                app:startIconDrawable="@drawable/ic_pa_person"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etLastName"
+                    style="@style/Theme_InputTextPA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/vSpace"
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/inputName"
+                android:layout_toEndOf="@+id/inputLastName" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputSecondLastName"
+                style="@style/Theme_InputTextPA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/inputName"
+                android:layout_toEndOf="@+id/vSpace"
+                android:hint="@string/pa_hint_second_last_name"
+                app:errorEnabled="true"
+                app:startIconDrawable="@drawable/ic_pa_person"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etSecondLastName"
+                    style="@style/Theme_InputTextPA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputBirthday"
+                style="@style/Theme_InputTextPA"
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/inputSecondLastName"
+                android:hint="@string/pa_hint_birthday"
+                app:errorEnabled="true"
+                app:startIconDrawable="@drawable/ic_pa_calendar"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etBirthday"
+                    style="@style/Theme_InputTextPA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:inputType="textCapWords"
+                    android:text="dd/mm/yyyy">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/vSpace2"
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/inputSecondLastName"
+                android:layout_toEndOf="@+id/inputBirthday" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputGender"
+                style="@style/Theme_OptionTextPa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/inputLastName"
+                android:layout_toEndOf="@+id/vSpace2"
+                android:hint="@string/pa_hint_gender"
+                app:errorEnabled="true"
+                app:startIconDrawable="@drawable/ic_pa_transgender"
+                tools:ignore="MissingConstraints">
+
+                <AutoCompleteTextView
+                    android:id="@+id/etGender"
+                    style="@style/Theme_InputTextPA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputEmail"
+                style="@style/Theme_InputTextPA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/inputBirthday"
+                android:hint="@string/pa_hint_email"
+                app:errorEnabled="true"
+                app:startIconDrawable="@drawable/ic_pa_email"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmail"
+                    style="@style/Theme_InputTextPA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputState"
+                style="@style/Theme_OptionTextPa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/inputEmail"
+                android:hint="@string/pa_hint_state"
+                app:errorEnabled="true"
+                app:startIconDrawable="@drawable/ic_pa_state"
+                tools:ignore="MissingConstraints">
+
+                <AutoCompleteTextView
+                    android:id="@+id/etState"
+                    style="@style/Theme_InputTextPA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputPhone"
+                style="@style/Theme_InputTextPA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/inputState"
+                android:hint="@string/pa_hint_phone"
+                app:errorEnabled="true"
+                app:startIconDrawable="@drawable/ic_pa_smartphone"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPhone"
+                    style="@style/Theme_InputTextPA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="11">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvUserData"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/inputPhone"
+                android:padding="4dp"
+                android:text="@string/pa_hint_user_data"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputUser"
+                style="@style/Theme_InputTextPA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvUserData"
+                android:hint="@string/pa_hint_user"
+                app:errorEnabled="true"
+                app:startIconDrawable="@drawable/ic_pa_person"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etUser"
+                    style="@style/Theme_InputTextPA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputPassword"
+                style="@style/Theme_InputTextPA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/inputUser"
+                android:hint="@string/pa_hint_password"
+                app:errorEnabled="true"
+                app:passwordToggleEnabled="true"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPassword"
+                    style="@style/Theme_InputTextPA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:maxLength="20">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputPasswordConfirm"
+                style="@style/Theme_InputTextPA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/inputPassword"
+                android:hint="@string/pa_hint_password_confirm"
+                app:errorEnabled="true"
+                app:passwordToggleEnabled="true"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPasswordConfirm"
+                    style="@style/Theme_InputTextPA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:maxLength="20">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRegister"
+        style="@style/Theme_BackgroundButtonPresentationPablo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/svPablo"
+        android:layout_marginTop="8dp"
+        android:text="@string/pa_hint_register" />
+</RelativeLayout>

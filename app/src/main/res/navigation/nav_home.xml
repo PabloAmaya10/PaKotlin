@@ -7,32 +7,71 @@
 
     <fragment
         android:id="@+id/frgHome"
-        android:name="com.pa.pakotlin.view.FrgHome"
+        android:name="com.pa.pakotlin.presentation.view.FrgHome"
         android:label="frg_home"
-        tools:layout="@layout/frg_home" >
-        <action
-            android:id="@+id/toFrgProfile"
-            app:destination="@id/frgProfile" />
-        <action
-            android:id="@+id/toFrgAbout"
-            app:destination="@id/frgAbout" />
-        <action
-            android:id="@+id/toFrgContent"
-            app:destination="@id/frgContent" />
-    </fragment>
+        tools:layout="@layout/frg_home" />
     <fragment
         android:id="@+id/frgAbout"
-        android:name="com.pa.pakotlin.view.FrgAbout"
+        android:name="com.pa.pakotlin.presentation.view.FrgAbout"
         android:label="frg_about"
-        tools:layout="@layout/frg_about" />
+        tools:layout="@layout/frg_about">
+        <action
+            android:id="@+id/toFrgAboutB"
+            app:destination="@id/frgAboutB" />
+    </fragment>
     <fragment
         android:id="@+id/frgContent"
-        android:name="com.pa.pakotlin.view.FrgContent"
+        android:name="com.pa.pakotlin.presentation.view.FrgContent"
         android:label="frg_content"
         tools:layout="@layout/frg_content" />
     <fragment
         android:id="@+id/frgProfile"
-        android:name="com.pa.pakotlin.view.FrgProfile"
+        android:name="com.pa.pakotlin.presentation.view.FrgProfile"
         android:label="frg_profile"
         tools:layout="@layout/frg_profile" />
+    <fragment
+        android:id="@+id/frgNavigation"
+        android:name="com.pa.pakotlin.presentation.view.FrgNavigation"
+        android:label="frg_navigation"
+        tools:layout="@layout/frg_navigation" />
+    <fragment
+        android:id="@+id/frgPokemon"
+        android:name="com.pa.pakotlin.presentation.view.FrgPokemon"
+        android:label="frg_pokemon"
+        tools:layout="@layout/frg_pokemon" />
+    <fragment
+        android:id="@+id/frgAboutB"
+        android:name="com.pa.pakotlin.presentation.view.FrgAboutB"
+        android:label="frg_about_b"
+        tools:layout="@layout/frg_about_b">
+        <action
+            android:id="@+id/toFrgAboutC"
+            app:destination="@id/frgAboutC" />
+        <argument
+            android:name="argFromA"
+            app:argType="string" />
+        <argument
+            android:name="argFromA2"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/frgAboutC"
+        android:name="com.pa.pakotlin.presentation.view.FrgAboutC"
+        android:label="frg_about_c"
+        tools:layout="@layout/frg_about_c">
+        <action
+            android:id="@+id/toFrgAbout"
+            app:destination="@id/frgAbout"
+            app:popUpTo="@id/frgAbout"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="argFromB"
+            app:argType="string" />
+        <argument
+            android:name="argFromBInteger"
+            app:argType="integer" />
+        <argument
+            android:name="argFromBBoolean"
+            app:argType="boolean" />
+    </fragment>
 </navigation>

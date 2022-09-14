@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pa_states">
+        <item>CDMX</item>
+        <item>Estado de Mexico</item>
+        <item>Tabasco</item>
+        <item>Veracruz</item>
+        <item>Yucatan</item>
+    </string-array>
+</resources>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Status:"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/tvRealStatus"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvRealStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Activo"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/ivProfile"
+            android:layout_width="200sp"
+            android:layout_height="100sp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/img_pa_android"
+            app:layout_constraintEnd_toStartOf="@id/tvStatus"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre:"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivProfile" />
+
+        <TextView
+            android:id="@+id/tvRealNameDas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@id/tvName"
+            app:layout_constraintTop_toBottomOf="@+id/ivProfile"
+            tools:ignore="RtlSymmetry"
+            tools:text="Pablo" />
+
+        <TextView
+            android:id="@+id/tvUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User:"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+        <TextView
+            android:id="@+id/tvRealUserDas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@id/tvUser"
+            app:layout_constraintTop_toBottomOf="@+id/tvName"
+            tools:ignore="RtlSymmetry"
+            tools:text="Pablo123" />
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email:"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvUser" />
+
+        <TextView
+            android:id="@+id/tvRealEmailDas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@id/tvEmail"
+            app:layout_constraintTop_toBottomOf="@+id/tvUser"
+            tools:ignore="RtlSymmetry"
+            tools:text="Pablo123" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_width="match_parent"
+        app:shimmer_auto_start="true"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clShi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/tvStatusShi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:background="#AAAAAA"
+                android:text="Status:"
+                android:textColor="#AAAAAA"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/tvRealStatusShi"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvRealStatusShi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#AAAAAA"
+                android:text="Activo"
+                android:textColor="#AAAAAA"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <View
+                android:id="@+id/ivProfileShi"
+                android:layout_width="200sp"
+                android:layout_height="100sp"
+                android:layout_margin="10dp"
+                android:layout_marginTop="8dp"
+                android:background="#AAAAAA"
+                android:src="@drawable/img_pa_android"
+                app:layout_constraintEnd_toStartOf="@id/tvStatusShi"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvNameShi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#AAAAAA"
+                android:text="Nombre:"
+                android:textColor="#AAAAAA"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivProfileShi" />
+
+            <TextView
+                android:id="@+id/tvRealNameDasShi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#AAAAAA"
+                android:paddingStart="10dp"
+                android:textColor="#AAAAAA"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@id/tvNameShi"
+                app:layout_constraintTop_toBottomOf="@+id/ivProfileShi"
+                tools:ignore="RtlSymmetry"
+                tools:text="Pablo" />
+
+            <TextView
+                android:id="@+id/tvUserShi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#AAAAAA"
+                android:text="User:"
+                android:textColor="#AAAAAA"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvNameShi" />
+
+            <TextView
+                android:id="@+id/tvRealUserDasShi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#AAAAAA"
+                android:paddingStart="10dp"
+                android:textColor="#AAAAAA"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@id/tvUserShi"
+                app:layout_constraintTop_toBottomOf="@+id/tvNameShi"
+                tools:ignore="RtlSymmetry"
+                tools:text="Pablo123" />
+
+            <TextView
+                android:id="@+id/tvEmailShi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#AAAAAA"
+                android:text="Email:"
+                android:textColor="#AAAAAA"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvUserShi" />
+
+            <TextView
+                android:id="@+id/tvRealEmailDasShi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#AAAAAA"
+                android:paddingStart="10dp"
+                android:textColor="#AAAAAA"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@id/tvEmailShi"
+                app:layout_constraintTop_toBottomOf="@+id/tvUserShi"
+                tools:ignore="RtlSymmetry"
+                tools:text="Pablo123" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

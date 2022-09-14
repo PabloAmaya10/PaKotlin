@@ -6,7 +6,7 @@
     android:background="@drawable/bg_pa_presentation"
     android:orientation="vertical"
     android:weightSum="4"
-    tools:context=".view.FrgHome">
+    tools:context=".presentation.view.FrgHome">
 
     <TextView
         android:id="@+id/tvWelcome"
@@ -29,35 +29,5 @@
         android:textColor="@color/white"
         android:textSize="30sp"
         tools:text="Pablo" />
-
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="150dp">
-
-    </View>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnProfile"
-        android:layout_width="300dp"
-        android:layout_height="65dp"
-        android:layout_gravity="center"
-        android:text="@string/pa_home_profile"
-        android:textSize="16sp" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnContent"
-        android:layout_width="300dp"
-        android:layout_height="65dp"
-        android:layout_gravity="center"
-        android:text="@string/pa_home_content"
-        android:textSize="16sp" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnAbout"
-        android:layout_width="300dp"
-        android:layout_height="65dp"
-        android:layout_gravity="center"
-        android:text="@string/pa_home_about"
-        android:textSize="16sp" />
 
 </LinearLayout>
