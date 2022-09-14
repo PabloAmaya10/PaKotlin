@@ -8,8 +8,9 @@ import com.pa.pakotlin.data.model.LoginResponse
 import com.pa.pakotlin.data.model.RegisterRequest
 import com.pa.pakotlin.data.network.Path.BASE_URL
 import com.pa.pakotlin.data.network.RetrofitClient
+import javax.inject.Inject
 
-class RegisterRepository {
+class RegisterRepository @Inject constructor() {
     var wifi = true
 
     suspend fun register(registerRequest: RegisterRequest): LoginResponse {

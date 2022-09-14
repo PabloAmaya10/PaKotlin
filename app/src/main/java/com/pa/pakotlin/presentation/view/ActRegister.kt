@@ -17,7 +17,9 @@ import com.pa.pakotlin.databinding.ActResgisterBinding
 import com.pa.pakotlin.model.Gender
 import com.pa.pakotlin.presentation.model.RegisterModel
 import com.pa.pakotlin.presentation.viewmodel.RegisterViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ActRegister : AppCompatActivity() {
     private lateinit var customAlert: CustomAlert
     private lateinit var binding: ActResgisterBinding

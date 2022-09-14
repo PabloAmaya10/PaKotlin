@@ -11,12 +11,18 @@ import com.pa.pakotlin.domain.usecases.GetUserDataApiUseCase
 import com.pa.pakotlin.domain.usecases.LoginUseCase
 import com.pa.pakotlin.model.CredentialsModel
 import com.pa.pakotlin.model.ErrorLogin
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class MainViewModel : ViewModel() {
+@HiltViewModel
+class MainViewModel @Inject constructor(
+    private val loginUseCase: LoginUseCase,
+    private val getUserDataApiUseCase: GetUserDataApiUseCase
+) : ViewModel() {
 
-    private val loginUseCase = LoginUseCase()
-    private val getUserDataApiUseCase = GetUserDataApiUseCase()
+    // private val loginUseCase = LoginUseCase()
+    // private val getUserDataApiUseCase = GetUserDataApiUseCase()
 
     private val _stateLogin = MutableLiveData<LoginState>()
     private val _errorLogin = MutableLiveData<ErrorLogin>()

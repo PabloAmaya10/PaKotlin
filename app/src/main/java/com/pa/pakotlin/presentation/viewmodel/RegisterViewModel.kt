@@ -10,11 +10,15 @@ import com.pa.pakotlin.LoginState
 import com.pa.pakotlin.domain.usecases.RegisterUseCase
 import com.pa.pakotlin.domain.usecases.SaveUserDatabaseUseCase
 import com.pa.pakotlin.presentation.model.RegisterModel
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import java.util.*
+import javax.inject.Inject
 
-class RegisterViewModel : ViewModel() {
-    private val registerUseCase = RegisterUseCase()
+@HiltViewModel
+class RegisterViewModel @Inject constructor(private val registerUseCase: RegisterUseCase) :
+    ViewModel() {
+    // private val registerUseCase = RegisterUseCase()
     private val saveUserDatabaseUseCase = SaveUserDatabaseUseCase()
 
     private val _date = MutableLiveData<String>()
@@ -58,6 +62,4 @@ class RegisterViewModel : ViewModel() {
             }
         }
     }
-
-
 }

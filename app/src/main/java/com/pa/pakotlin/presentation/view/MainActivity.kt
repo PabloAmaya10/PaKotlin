@@ -12,7 +12,9 @@ import com.pa.pakotlin.LoginState
 import com.pa.pakotlin.data.model.LoginRequest
 import com.pa.pakotlin.databinding.ActivityMainBinding
 import com.pa.pakotlin.presentation.viewmodel.MainViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var customAlert: CustomAlert
     private lateinit var bilder: AlertDialog.Builder

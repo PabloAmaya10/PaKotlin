@@ -9,12 +9,12 @@ import com.pa.pakotlin.presentation.model.InfoModel
 import com.pa.pakotlin.presentation.model.UserModel
 import com.pa.pakotlin.presentation.model.toInfoModel
 import com.pa.pakotlin.presentation.model.toModel
+import javax.inject.Inject
 
-class InfoRepository {
+class InfoRepository @Inject constructor() {
     private val wifi = true
     suspend fun getInfoUser(userName: String, context: Context): InfoModel {
         val dataBase = DataBase(context).getDataBase()
-
         return if (wifi) {
             val infoUser = RetrofitClient.api(BASE_URL).getInfo(userName)
             dataBase.daoUser().insertOrUpdate(infoUser.toDatabase(userName))

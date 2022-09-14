@@ -3,8 +3,9 @@ package com.pa.pakotlin.domain.repository
 import android.content.Context
 import com.pa.pakotlin.data.local.room.DataBase
 import com.pa.pakotlin.presentation.model.*
+import javax.inject.Inject
 
-class GetDatabaseRepository {
+class GetDatabaseRepository @Inject constructor() {
 
     suspend fun getInfoFromDataBase(userLogin: String, context: Context): InfoModel {
         val dataBase = DataBase(context).getDataBase()

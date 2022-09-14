@@ -4,8 +4,9 @@ import android.content.Context
 import android.content.SharedPreferences
 import com.pa.pakotlin.data.local.sp.SpConstant.KEY_USER
 import com.pa.pakotlin.data.local.sp.SpConstant.NAME_FILE
+import javax.inject.Inject
 
-class SharedPrefRepository {
+class SharedPrefRepository @Inject constructor() {
     private lateinit var sharedPref: SharedPreferences
 
     // context.getSharedPreferences(NAME_FILE, Context.MODE_PRIVATE)

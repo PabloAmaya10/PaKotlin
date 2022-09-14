@@ -8,13 +8,20 @@ import androidx.lifecycle.viewModelScope
 import com.pa.pakotlin.InfoState
 import com.pa.pakotlin.domain.usecases.GetUserDatabaseUseCase
 import com.pa.pakotlin.domain.usecases.SaveDataSpUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class DashboardViewModel : ViewModel() {
-    private val saveDataSpUseCase = SaveDataSpUseCase()
+@HiltViewModel
+class DashboardViewModel @Inject constructor(
+    private val saveDataSpUseCase: SaveDataSpUseCase,
+    private val getUserDatabaseUseCase: GetUserDatabaseUseCase
+) :
+    ViewModel() {
+    // private val saveDataSpUseCase = SaveDataSpUseCase()
 
     // private val getUserDataApiUseCase = GetUserDataApiUseCase()
-    private val getUserDatabaseUseCase = GetUserDatabaseUseCase()
+    // private val getUserDatabaseUseCase = GetUserDatabaseUseCase()
 
     private val _stateSp = MutableLiveData<Boolean>()
     private val _userInfo = MutableLiveData<InfoState>()

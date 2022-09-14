@@ -24,7 +24,9 @@ import com.pa.pakotlin.InfoState
 import com.pa.pakotlin.R
 import com.pa.pakotlin.databinding.ActDashboardBinding
 import com.pa.pakotlin.presentation.viewmodel.DashboardViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ActDashboard : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     private lateinit var customAlert: CustomAlert
     private lateinit var binding: ActDashboardBinding
