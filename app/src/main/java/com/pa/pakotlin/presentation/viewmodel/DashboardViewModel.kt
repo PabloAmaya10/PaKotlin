@@ -10,11 +10,13 @@ import com.pa.pakotlin.domain.usecases.GetUserDatabaseUseCase
 import com.pa.pakotlin.domain.usecases.SaveDataSpUseCase
 import kotlinx.coroutines.launch
 
-class DashboardViewModel : ViewModel() {
-    private val saveDataSpUseCase = SaveDataSpUseCase()
-
+class DashboardViewModel(
+    private val saveDataSpUseCase: SaveDataSpUseCase,
+    private val getUserDatabaseUseCase: GetUserDatabaseUseCase
+) : ViewModel() {
+    // private val saveDataSpUseCase = SaveDataSpUseCase()
     // private val getUserDataApiUseCase = GetUserDataApiUseCase()
-    private val getUserDatabaseUseCase = GetUserDatabaseUseCase()
+    // private val getUserDatabaseUseCase = GetUserDatabaseUseCase()
 
     private val _stateSp = MutableLiveData<Boolean>()
     private val _userInfo = MutableLiveData<InfoState>()

@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
-import androidx.activity.viewModels
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -24,11 +23,14 @@ import com.pa.pakotlin.InfoState
 import com.pa.pakotlin.R
 import com.pa.pakotlin.databinding.ActDashboardBinding
 import com.pa.pakotlin.presentation.viewmodel.DashboardViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class ActDashboard : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     private lateinit var customAlert: CustomAlert
     private lateinit var binding: ActDashboardBinding
-    private val viewModelDashboard: DashboardViewModel by viewModels()
+    private val viewModelDashboard by viewModel<DashboardViewModel>()
+
+    // private val viewModelDashboard: DashboardViewModel by viewModels()
     lateinit var actionBarDrawableToggle: ActionBarDrawerToggle
     private var user = ""
 

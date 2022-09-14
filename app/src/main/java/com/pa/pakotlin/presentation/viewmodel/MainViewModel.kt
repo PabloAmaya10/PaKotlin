@@ -13,10 +13,13 @@ import com.pa.pakotlin.model.CredentialsModel
 import com.pa.pakotlin.model.ErrorLogin
 import kotlinx.coroutines.launch
 
-class MainViewModel : ViewModel() {
+class MainViewModel(
+    private val loginUseCase: LoginUseCase,
+    private val getUserDataApiUseCase: GetUserDataApiUseCase
+) : ViewModel() {
 
-    private val loginUseCase = LoginUseCase()
-    private val getUserDataApiUseCase = GetUserDataApiUseCase()
+    // private val loginUseCase = LoginUseCase()
+    // private val getUserDataApiUseCase = GetUserDataApiUseCase()
 
     private val _stateLogin = MutableLiveData<LoginState>()
     private val _errorLogin = MutableLiveData<ErrorLogin>()

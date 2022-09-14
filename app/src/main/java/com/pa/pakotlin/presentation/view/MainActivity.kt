@@ -2,7 +2,6 @@ package com.pa.pakotlin.presentation.view
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.mh.custom_alert.CustomAlert
@@ -12,12 +11,15 @@ import com.pa.pakotlin.LoginState
 import com.pa.pakotlin.data.model.LoginRequest
 import com.pa.pakotlin.databinding.ActivityMainBinding
 import com.pa.pakotlin.presentation.viewmodel.MainViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity() {
     private lateinit var customAlert: CustomAlert
     private lateinit var bilder: AlertDialog.Builder
     private lateinit var binding: ActivityMainBinding
-    private val viewModelMain: MainViewModel by viewModels()
+    private val viewModelMain by viewModel<MainViewModel>()
+
+    // private val viewModelMain: MainViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
